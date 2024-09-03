@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="appPaisajeCurvasBezier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6Z-2a-Nec" customClass="SkyView" customModule="appPaisajeCurvasBezier" customModuleProvider="target">
+                                <rect key="frame" x="44" y="0.0" width="808" height="427"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ar-Vs-L7r" customClass="ContainerScrollView" customModule="appPaisajeCurvasBezier" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="417"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="JeZ-ZS-enp"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="MKT-OX-qxt"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2ar-Vs-L7r" firstAttribute="leading" secondItem="k6Z-2a-Nec" secondAttribute="leading" id="KP1-bH-Cvk"/>
+                                    <constraint firstItem="2ar-Vs-L7r" firstAttribute="centerY" secondItem="k6Z-2a-Nec" secondAttribute="centerY" id="kqL-fj-EqT"/>
+                                    <constraint firstItem="2ar-Vs-L7r" firstAttribute="centerX" secondItem="k6Z-2a-Nec" secondAttribute="centerX" id="maK-eh-sEu"/>
+                                    <constraint firstItem="2ar-Vs-L7r" firstAttribute="top" secondItem="k6Z-2a-Nec" secondAttribute="top" constant="229" id="wOI-3e-9lT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k6Z-2a-Nec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9P6-9P-dge"/>
+                            <constraint firstItem="k6Z-2a-Nec" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ID0-uW-Ws4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="k6Z-2a-Nec" secondAttribute="bottom" constant="-34" id="JT5-Xc-SpC"/>
+                            <constraint firstItem="k6Z-2a-Nec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K2l-Vd-cjF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerScrollView" destination="2ar-Vs-L7r" id="9qa-sx-4qZ"/>
+                        <outlet property="skyView" destination="k6Z-2a-Nec" id="s5w-P7-OqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="126.08695652173914"/>
+        </scene>
+    </scenes>
+</document>
